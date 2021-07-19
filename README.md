@@ -33,7 +33,7 @@ Things you may want to cover:
 | ------------------ | ------ | ----------- |
 | nickname              | string | null: false |
 | email                 | string | null: false, unique: true	|
-| password_confirmation  | string | null: false |
+| encrypted_password     | string | null: false |
 | last_name               | string   | null: false |
 | first_name              | string   | null: false |
 | last_name_kana           | string   | null: false |
@@ -67,6 +67,7 @@ Things you may want to cover:
 | Column             | Type               | Options     |
 | ------------------ | ------------------ | ----------- |
 | user                      | references           | null: false, foreign_key: true|
+| product_name               | string                | null: false |
 | info                      | text                 | null: false |
 | category_id               | integer            | null: false | ActiveHash
 | sales_status_id           |  integer          | null: false | ActiveHash
@@ -89,10 +90,10 @@ Things you may want to cover:
 | ---------- | ---------- | ------------|
 | purchase             | references      | null: false, foreign_key: true |
 | postal_code          | string         | null: false |
-| prefecture           | integer        | null: false | ActiveHash
+| prefecture_id           | integer        | null: false | ActiveHash
 | city                  | string         | null: false |
 | addresses              | string         | null: false |
-| building              | string         | null: false |
+| building              | string         |               |
 | phone_number            | string         | null: false |
 ### Association
 
