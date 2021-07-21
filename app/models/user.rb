@@ -7,20 +7,24 @@ class User < ApplicationRecord
   has_many :items
 
   with_options presence: true do
-  validates :nickname
-  validates :last_name
-  validates :first_name
-  validates :last_name_kana
-  validates :first_name_kana
-  validates :birth_date
+    validates :nickname
+    validates :last_name
+    validates :first_name
+    validates :last_name_kana
+    validates :first_name_kana
+    validates :birth_date
   end
   
-  validates :last_name, format: {with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
-  validates :first_name, format: {with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
+  with_options format: {with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/} do
+    validates :last_name
+    validates :first_name
+  end
 
-  validates :last_name_kana, format: {with: /\A[ァ-ヶー]+\z/}
-  validates :first_name_kana, format: {with: /\A[ァ-ヶー]+\z/}
-  # 半角英字数字のみ許可する
+  with_options format: {with: /\A[ァ-ヶー]+\z/} do
+    validates :last_name_kana
+    validates :first_name_kana
+  end
+  
   validates :password, format:{with: /\A(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+\z/}
 
 end
