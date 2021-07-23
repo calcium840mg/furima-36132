@@ -3,11 +3,11 @@ FactoryBot.define do
     
     product_name { "オアシス" }
     info { "スーパーソニック" }
-    category_id { "5" }
-    sales_status_id { "5" }
-    shipping_fee_status_id { "5" }
-    prefecture_id { "5" }
-    scheduled_delivery_id { "5" }
+    category_id { 5 }
+    sales_status_id { 5 }
+    shipping_fee_status_id { 5 }
+    prefecture_id { 5 }
+    scheduled_delivery_id { 5 }
     price { 50000 }
     association :user
   
