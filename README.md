@@ -58,7 +58,7 @@ Things you may want to cover:
 
 - belongs_to :user
 - belongs_to :item
-- has_one    :pay_form
+- has_one    :address
 
 
 
@@ -84,7 +84,7 @@ Things you may want to cover:
 
 
 
-## pay_form テーブル
+## address テーブル
 
 | Column     | Type       | Options     |
 | ---------- | ---------- | ------------|
