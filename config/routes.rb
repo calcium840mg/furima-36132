@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :items do
 
-    resources :purchase_address
+    resources :purchase_address, only: [:new, :create]
 
 
   end
