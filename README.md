@@ -90,7 +90,7 @@ Things you may want to cover:
 | ---------- | ---------- | ------------|
 | purchase             | references      | null: false, foreign_key: true |
 | postal_code          | string         | null: false |
-| prefecture_id           | integer        | null: false | ActiveHash
+| prefecture_id        | integer        | null: false | ActiveHash
 | city                  | string         | null: false |
 | addresses              | string         | null: false |
 | building              | string         |               |
